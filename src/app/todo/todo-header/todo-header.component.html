@@ -1,1 +1,13 @@
-<p>todo-header works!</p>
+<div class="todo-header">
+  <div class="todo-header__heading">
+    <h1 class="todo-header__title">TODO</h1>
+    <img alt="icon-moon" height="26" src="assets/icon-moon.svg">
+  </div>
+  <mat-form-field class="todo-header__input">
+    <div (click)="toggleCheck()" [class.checked]="completed" class="todo-header__custom-checkbox">
+      <img *ngIf="completed" height="8" src="assets/icon-check.svg" width="8">
+    </div>
+    <input (keyup.enter)="addTodo()" [(ngModel)]="newTodoTitle" matInput
+           placeholder="Create a new todo...">
+  </mat-form-field>
+</div>
