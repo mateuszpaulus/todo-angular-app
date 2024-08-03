@@ -46,3 +46,24 @@ body {
   background-color: hsl(0, 0%, 98%);
   margin: 0;
 }
+
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  margin-right: 16px;
+  outline: 2px solid #ccc;
+
+  &:hover {
+    outline-color: #666;
+  }
+
+  &.checked {
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  }
+}
