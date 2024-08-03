@@ -9,22 +9,29 @@
   border-bottom-right-radius: 8px;
 
   &__items {
-    color: hsl(236, 9%, 61%);
+    color: hsl(233, 11%, 84%);
   }
 
   &__clear {
     text-align: right;
-    color: hsl(236, 9%, 61%);
+    color: hsl(233, 11%, 84%);
     cursor: pointer;
 
     &:hover {
-      color: hsl(235, 19%, 35%);
+      color: hsl(236, 9%, 61%);
     }
   }
 
   &__filters {
-    display: flex;
-    justify-content: space-between;
+
+    &--desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--mobile {
+      display: none;
+    }
 
     &--item {
       cursor: pointer;
@@ -38,6 +45,28 @@
         color: hsl(220, 98%, 61%);
       }
     }
+  }
 
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+
+    &__filters {
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: flex;
+        justify-content: center;
+        padding: 12px;
+        border-radius: 8px;
+        margin-top: 16px;
+        background: white;
+      }
+
+      &--item {
+        padding: 8px;
+      }
+    }
   }
 }
