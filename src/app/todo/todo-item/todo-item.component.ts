@@ -1,12 +1,27 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {CommonModule} from "@angular/common";
+import {TodoService} from "../todo.service";
+import {TodoModel} from "../todo.model";
 
 @Component({
   selector: 'app-todo-item',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './todo-item.component.html',
   styleUrl: './todo-item.component.scss'
 })
 export class TodoItemComponent {
+  @Input() todo!: TodoModel;
 
+  constructor(private todoService: TodoService) {
+  }
+
+  toggleCheck(): void {
+    console.log('xx1')
+    this.todoService.toggleTodoCompletion(this.todo.id);
+  }
+
+  deleteTodo(): void {
+    this.todoService.deleteTodo(this.todo.id);
+  }
 }

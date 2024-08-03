@@ -1,1 +1,11 @@
-<p>todo-list works!</p>
+<div class="todo-list">
+  <div cdkDropListGroup class="todo-list__container">
+    <div (cdkDropListDropped)="drop($event)" cdkDropList>
+      <ul *ngFor="let todo of todos" cdkDrag class="todo-list__ul">
+        <app-todo-item [todo]="todo"></app-todo-item>
+      </ul>
+    </div>
+    <app-todo-footer></app-todo-footer>
+  </div>
+  <p class="todo-list__paragraph">Drag and drop to reorder list</p>
+</div>

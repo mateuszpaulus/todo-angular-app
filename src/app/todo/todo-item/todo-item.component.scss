@@ -1,0 +1,32 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 0 20px;
+  height: 60px;
+  border-bottom: 1px solid hsl(236, 33%, 92%);
+
+  &__title {
+    flex-grow: 1;
+    font-weight: 500;
+    color: hsl(235, 19%, 35%);
+
+    &.completed {
+      text-decoration: line-through;
+      color: hsl(233, 11%, 84%);
+    }
+  }
+
+  &__cross {
+    display: none;
+    cursor: pointer;
+
+    .todo-item:hover & {
+      display: block;
+    }
+
+    @media (max-width: 375px) {
+      display: block;
+    }
+  }
+}

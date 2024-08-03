@@ -1,0 +1,29 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &__container {
+    width: 100%;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0px 13px 46px -7px hsl(233, 11%, 84%);
+  }
+
+  &__ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__paragraph {
+    font-size: 14px;
+    margin-top: 50px;
+    color: hsl(233, 11%, 84%);
+  }
+}
+
+app-todo-footer {
+  width: 100%;
+}

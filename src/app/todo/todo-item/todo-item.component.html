@@ -1,1 +1,9 @@
-<p>todo-item works!</p>
+<li class="todo-item">
+  <div (click)="toggleCheck()" [class.checked]="todo.completed" class="custom-checkbox">
+    <img *ngIf="todo.completed" height="8" src="assets/icon-check.svg" width="8">
+  </div>
+  <span [class.completed]="todo.completed" class="todo-item__title">{{ todo.title }}</span>
+  <div (click)="deleteTodo()" class="todo-item__cross">
+    <img height="16" src="assets/icon-cross.svg" width="16">
+  </div>
+</li>
