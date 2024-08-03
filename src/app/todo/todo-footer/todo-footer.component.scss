@@ -1,0 +1,43 @@
+.todo-footer {
+  font-size: 14px;
+  display: grid;
+  column-gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: white;
+  padding: 20px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  &__items {
+    color: hsl(236, 9%, 61%);
+  }
+
+  &__clear {
+    text-align: right;
+    color: hsl(236, 9%, 61%);
+    cursor: pointer;
+
+    &:hover {
+      color: hsl(235, 19%, 35%);
+    }
+  }
+
+  &__filters {
+    display: flex;
+    justify-content: space-between;
+
+    &--item {
+      cursor: pointer;
+      color: hsl(236, 9%, 61%);
+
+      &:hover {
+        color: hsl(235, 19%, 35%);
+      }
+
+      &.active {
+        color: hsl(220, 98%, 61%);
+      }
+    }
+
+  }
+}

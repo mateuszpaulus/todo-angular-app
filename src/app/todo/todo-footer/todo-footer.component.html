@@ -1,1 +1,10 @@
-<p>todo-footer works!</p>
+<div class="todo-footer">
+  <span class="todo-footer__items">{{ activeCount }} items left</span>
+  <div class="todo-footer__filters">
+    <span (click)="setFilter('all')" [class.active]="filter === 'all'" class="todo-footer__filters--item">All</span>
+    <span (click)="setFilter('active')" [class.active]="filter === 'active'"
+          class="todo-footer__filters--item">Active</span>
+    <span (click)="setFilter('completed')" [class.active]="filter === 'completed'" class="todo-footer__filters--item">Completed</span>
+  </div>
+  <span (click)="clearCompleted()" class="todo-footer__clear">Clear Completed</span>
+</div>
