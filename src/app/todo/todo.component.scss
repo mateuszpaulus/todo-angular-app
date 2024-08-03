@@ -1,0 +1,31 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+
+  &__header-background {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('/assets/bg-desktop-light.jpg');
+    background-size: cover;
+    background-position: center;
+    max-height: 350px;
+    height: 100%;
+    max-width: 1440px;
+    width: 100%;
+    @media (max-width: 375px) {
+      background-image: url('/assets/bg-mobile-light.jpg');
+    }
+  }
+
+  &__content-container {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 70px;
+    z-index: 1;
+  }
+}
+
