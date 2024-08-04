@@ -17,7 +17,6 @@ export class TodoItemComponent {
   }
 
   toggleCheck(): void {
-    console.log('xx1')
     this.todoService.toggleTodoCompletion(this.todo.id);
   }
 

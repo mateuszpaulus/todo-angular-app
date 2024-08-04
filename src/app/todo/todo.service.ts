@@ -37,6 +37,7 @@ export class TodoService {
     const todo = this.todos.find(todo => todo.id === id);
     if (todo) {
       todo.completed = !todo.completed;
+      this.todosSubject.next(this.todos);
     }
   }
 
@@ -64,7 +65,6 @@ export class TodoService {
       default:
         filteredTodos = this.todos;
     }
-
     this.todosSubject.next(filteredTodos);
   }
 

@@ -10,6 +10,7 @@
     flex-grow: 1;
     font-weight: 500;
     color: hsl(235, 19%, 35%);
+    cursor: pointer;
 
     &.completed {
       text-decoration: line-through;
