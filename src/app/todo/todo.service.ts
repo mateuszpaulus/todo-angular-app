@@ -12,7 +12,7 @@ export class TodoService {
   private filterSubject = new BehaviorSubject<string>('all');
   filter$: Observable<string> = this.filterSubject.asObservable();
 
-  private todos: TodoModel[] = [{id: '1', title: 'sss11', completed: false}, {id: '2', title: 'sss', completed: true}];
+  private todos: TodoModel[] = [];
 
   constructor() {
     this.todosSubject.next(this.todos);
